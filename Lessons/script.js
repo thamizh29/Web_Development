@@ -7,6 +7,7 @@ console.log("External script connected.....");
         console.log(a === c);
 
 const x = document.getElementById("location");
+let value = "Hello world";
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -21,7 +22,8 @@ function success(position) {
 }
 
 function error() {
-  alert("Sorry, no position available.");
+  // alert("Sorry, no position available.");
+  // prompt("Confirm window");
 }
 
 getLocation()
@@ -59,3 +61,30 @@ let objectone = new Course();
 
 let objecttwo = new Course2()
 objecttwo.showCourse()
+
+// function getBack ->()
+// const getBack = () => {
+//   console.log("Entered")
+//   history.back
+// }
+
+function getBack(){
+  console.log("Entered")
+   window.history.back()
+   window.history.forward()
+}
+
+function Alarm(){
+    console.log("Time out!")
+}
+function AlarmTwo(){
+    console.log("Time out from interval fn!")
+}
+
+setTimeout(Alarm, 5000)
+setInterval(AlarmTwo, 5000)
+
+function updatePara(){
+  document.getElementById('update-para').innerText = "Hello";
+  document.getElementById('update-para').style.backgroundColor = 'red'
+}
